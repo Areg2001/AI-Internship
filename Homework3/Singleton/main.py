@@ -19,13 +19,16 @@ class Database(metaclass=SingleToneMeta):
     def add_column(self):
         print("Column added...")
 
+def test_function():
+    db = Database()
+    db1 = Database()
+    db2 = Database()
+    db3 = Database()
 
-db = Database()
-db1 = Database()
-db2 = Database()
-db3 = Database()
+    print(db1 is db)
+    print(db1 is db3)
+    print(db3 is db1)
+    print(db2 is db3)
 
-print(db1 is db)
-print(db1 is db3)
-print(db3 is db1)
-print(db2 is db3)
+if __name__ == "__main__":
+    test_function()
