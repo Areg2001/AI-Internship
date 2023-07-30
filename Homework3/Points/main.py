@@ -1,4 +1,4 @@
-from points import Point2D, Point3D
+from points import Point2D, Point3D, Point4D, Point5D
 
 def test_function():
     point1 = Point2D(3, 4)
@@ -14,8 +14,13 @@ def test_function():
     print(hash(point2))
     print(point3)
 
-    point6 = Point3D(2, 3)          #Error: Must be 3 arguments
-    po7 = Point2D(3, 4, 5)          #Error: Must be 2 arguments
+    point5 = Point4D(1, 2, 3, 4)
+    point6 = Point5D(2, 3, 4, 5, 6)
+    print(point5)
+    print(point6)
+
+    #point6 = Point3D(2, 3)          #Error: Must be 3 arguments
+    #po7 = Point2D(3, 4, 5)          #Error: Must be 2 arguments
 
 if __name__ == "__main__":
     test_function()
