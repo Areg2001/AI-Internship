@@ -2,7 +2,6 @@
     Downloader module, which contain thrading and multiprocessing downloaders.
 """
 
-from downloader_function import downloade_file
 from abc import ABC, abstractmethod
 import threading
 import multiprocessing
