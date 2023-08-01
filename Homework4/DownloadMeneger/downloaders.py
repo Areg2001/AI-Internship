@@ -86,6 +86,6 @@ class MultiprocessingDownloader(Download):
         """
 
         downloaded_file = downloade_file(self.url)
-        process = multiprocessing.Process(target=self.save_file, args=(downloaded_file))
+        process = multiprocessing.Process(target=self.save_file, args=(downloaded_file,))
         process.start()
-        self.complete()
+        self.download_complete()
