@@ -48,7 +48,7 @@ class DownloadMeneger:
             if threading.active_count() < self.max_threads:
                 ThreadingDownloader.start_download(download_file)
 
-            elif 0 < len(multiprocessing.active_children()) < self.max_processes:
+            elif len(multiprocessing.active_children()) < self.max_processes:
                 MultiprocessingDownloader.start_download(download_file)
                 
     def wait(self) -> str:
